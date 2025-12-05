@@ -31,3 +31,7 @@ Thumbs.db
 .cache/
 .parcel-cache/
 .eslintcache
+
+# JSON Data Storage (local persistence)
+backend/data/
+data/
