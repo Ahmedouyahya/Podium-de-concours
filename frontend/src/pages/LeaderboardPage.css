@@ -1,0 +1,127 @@
+.leaderboard-page {
+  min-height: calc(100vh - 200px);
+  padding-bottom: var(--space-2xl);
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.header-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-lg);
+  background: var(--color-gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.header-icon {
+  color: #1a1a3a;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-text-primary) 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.page-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.stat-icon {
+  color: var(--color-primary);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Full Leaderboard */
+.full-leaderboard {
+  margin-bottom: var(--space-xl);
+}
+
+.full-leaderboard .leaderboard-body {
+  max-height: none;
+}
+
+/* Refresh Section */
+.refresh-section {
+  text-align: center;
+}
+
+.refresh-button {
+  padding: var(--space-md) var(--space-xl);
+  background: var(--color-bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-full);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.refresh-button:hover {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .header-icon-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .header-icon {
+    width: 32px;
+    height: 32px;
+  }
+}

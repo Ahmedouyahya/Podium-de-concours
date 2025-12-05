@@ -1,0 +1,360 @@
+.leaderboard {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+}
+
+/* Header */
+.leaderboard-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 60px 60px 120px 50px;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Body */
+.leaderboard-body {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Row */
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 60px 60px 120px 50px;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  transition: background var(--transition-fast);
+}
+
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-row:hover {
+  background: var(--color-bg-glass);
+}
+
+/* Rank specific styles */
+.leaderboard-row.rank-gold {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.08) 0%, transparent 100%);
+}
+
+.leaderboard-row.rank-silver {
+  background: linear-gradient(90deg, rgba(192, 192, 192, 0.06) 0%, transparent 100%);
+}
+
+.leaderboard-row.rank-bronze {
+  background: linear-gradient(90deg, rgba(205, 127, 50, 0.06) 0%, transparent 100%);
+}
+
+/* Cells */
+.cell {
+  display: flex;
+  align-items: center;
+}
+
+/* Rank Column */
+.rank-col {
+  justify-content: center;
+}
+
+.rank-badge {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-glass);
+}
+
+.rank-1 {
+  background: var(--color-gold-gradient);
+  color: #1a1a3a;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.rank-2 {
+  background: var(--color-silver-gradient);
+  color: #1a1a3a;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+}
+
+.rank-3 {
+  background: var(--color-bronze-gradient);
+  color: #1a1a3a;
+  box-shadow: 0 0 10px rgba(205, 127, 50, 0.3);
+}
+
+.rank-trophy.gold { color: #1a1a3a; }
+.rank-trophy.silver { color: #1a1a3a; }
+.rank-trophy.bronze { color: #1a1a3a; }
+
+.rank-number {
+  font-family: var(--font-display);
+}
+
+/* Team Column */
+.team-col {
+  gap: var(--space-md);
+}
+
+.team-avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.team-details {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.team-name-text {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Members & Challenges */
+.members-col,
+.challenges-col {
+  justify-content: center;
+}
+
+.members-count,
+.challenges-count {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Score Column */
+.score-col {
+  justify-content: flex-end;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--color-bg-glass);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-md);
+}
+
+.score-icon {
+  flex-shrink: 0;
+}
+
+.score-number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.score-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Trend Column */
+.trend-col {
+  justify-content: center;
+}
+
+.trend-icon {
+  transition: transform var(--transition-fast);
+}
+
+.trend-up {
+  color: var(--color-success);
+}
+
+.trend-down {
+  color: var(--color-error);
+}
+
+.trend-stable {
+  color: var(--color-text-muted);
+}
+
+/* Row Glow */
+.row-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Loading Skeleton */
+.leaderboard-loading {
+  padding: var(--space-lg);
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-tertiary) 25%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.skeleton-rank {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-md);
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.skeleton-name {
+  height: 20px;
+  flex: 1;
+}
+
+.skeleton-score {
+  width: 80px;
+  height: 32px;
+}
+
+/* Empty State */
+.leaderboard-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl);
+  text-align: center;
+}
+
+.empty-icon {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}
+
+.leaderboard-empty p {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.leaderboard-empty span {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leaderboard-header,
+  .leaderboard-row {
+    grid-template-columns: 50px 1fr 80px;
+  }
+
+  .members-col,
+  .challenges-col,
+  .trend-col {
+    display: none;
+  }
+
+  .header-cell.members-col,
+  .header-cell.challenges-col,
+  .header-cell.trend-col {
+    display: none;
+  }
+
+  .leaderboard-header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .leaderboard-row {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .team-avatar-small {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .score-display {
+    padding: var(--space-xs);
+  }
+
+  .score-number {
+    font-size: 0.9rem;
+  }
+}
