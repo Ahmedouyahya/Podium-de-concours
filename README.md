@@ -1,269 +1,219 @@
 # 🏆 Podium de Concours - Nuit de l'Info 2025
 
-> Une application moderne et dynamique de classement en temps réel pour les compétitions, développée pour le défi "Podium de concours" de la Nuit de l'Info 2025.
+> **Défi:** Podium de concours - Développement Web Full-Stack
+> 
+> Une application moderne et dynamique de classement en temps réel pour les compétitions, développée pour la Nuit de l'Info 2025.
 
 <div align="center">
 
 ### 🚀 Réalisé par l'Équipe MAX 100% 🚀
 
+[![React](https://img.shields.io/badge/React-18.2-blue?logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?logo=typescript)](https://typescriptlang.org)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=nodedotjs)](https://nodejs.org)
+[![WCAG](https://img.shields.io/badge/WCAG-2.1_AA-purple)](https://www.w3.org/WAI/WCAG21/quickref/)
+
 </div>
 
-![React](https://img.shields.io/badge/React-18.2-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?logo=typescript)
-![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=nodedotjs)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql)
-![Accessibility](https://img.shields.io/badge/WCAG-2.1_AA-purple)
+---
 
-## ✨ Fonctionnalités
+## ✨ Fonctionnalités Réalisées
 
-### 🎯 Principales
-- **Classement en temps réel** - Mise à jour automatique via WebSocket
-- **Podium animé** - Visualisation spectaculaire des 3 premières équipes
-- **Gestion des équipes** - CRUD complet avec interface moderne
-- **Attribution de scores** - Interface admin intuitive
-- **Statistiques détaillées** - Dashboard avec métriques clés
+### 🎯 Fonctionnalités Principales
+- ✅ **Classement en temps réel** - Mise à jour automatique via WebSocket
+- ✅ **Podium animé** - Visualisation spectaculaire des 3 premières équipes
+- ✅ **Gestion des équipes** - CRUD complet (création, modification, suppression)
+- ✅ **Attribution de scores** - Interface admin intuitive
+- ✅ **Statistiques détaillées** - Dashboard avec métriques en temps réel
+- ✅ **Système d'authentification** - Admin, Leader, Participant
+- ✅ **Gestion des membres** - Leader peut ajouter/retirer des membres
+- ✅ **Compte à rebours** - Timer pour la compétition
+- ✅ **Fil d'activité** - Historique des actions en temps réel
 
-### 🎨 UI/UX
-- Design moderne avec effets glassmorphism
-- Animations fluides avec Framer Motion
-- Effets de confetti pour les célébrations
-- Thème sombre élégant
-- Responsive design (mobile-first)
-- Micro-interactions et transitions soignées
+### 🎨 Interface Utilisateur
+- ✅ Design moderne avec effets glassmorphism
+- ✅ Animations fluides avec Framer Motion
+- ✅ Effets de confetti pour les célébrations
+- ✅ Thème sombre élégant
+- ✅ Responsive design (mobile-first)
+- ✅ Micro-interactions et transitions soignées
 
 ### ♿ Accessibilité (WCAG 2.1 AA)
-- Navigation au clavier complète
-- Labels ARIA appropriés
-- Contraste de couleurs conforme
-- Skip links pour navigation rapide
-- Support des lecteurs d'écran
-- Réduction de mouvement respectée
-- Focus visible sur tous les éléments interactifs
+- ✅ Navigation au clavier complète (Tab, Enter, Escape)
+- ✅ Labels ARIA appropriés pour lecteurs d'écran
+- ✅ Ratio de contraste minimum 4.5:1
+- ✅ Skip links vers le contenu principal
+- ✅ Focus visible sur tous les éléments interactifs
+- ✅ Support `prefers-reduced-motion`
+- ✅ Structure sémantique HTML5
+- ✅ Textes alternatifs pour icônes
 
-## 🛠️ Technologies
+### 💾 Stockage Adaptatif
+- ✅ **MySQL** - Si base de données configurée
+- ✅ **JSON Files** - Persistance locale automatique
+- ✅ **In-Memory** - Mode démo sans configuration
 
-### Frontend
-- **React 18** avec TypeScript
-- **Framer Motion** - Animations
-- **React Router** - Navigation
-- **Socket.io-client** - Temps réel
-- **Lucide React** - Icônes
-- **React Hot Toast** - Notifications
-- **React Confetti** - Effets festifs
+---
 
-### Backend
-- **Node.js** avec Express & TypeScript
-- **Stockage Adaptatif** - MySQL → JSON → Mémoire
-- **Socket.io** - WebSocket temps réel
-
-## 🚀 Installation Locale
+## 🚀 Lancer l'Application de A à Z
 
 ### Prérequis
-- Node.js 18+
-- npm ou yarn
-- MySQL 8.0+ (optionnel - l'app fonctionne sans!)
+- **Node.js 18+** ([télécharger](https://nodejs.org))
+- **npm** (inclus avec Node.js)
+- MySQL 8.0+ *(optionnel - l'app fonctionne sans!)*
 
-### Installation rapide (sans MySQL)
+### Installation en 4 étapes
 
 ```bash
-# Cloner le projet
+# 1. Cloner le projet
 git clone https://github.com/Ahmedouyahya/Podium-de-concours.git
 cd Podium-de-concours
 
-# Backend
+# 2. Installer et lancer le Backend
 cd backend
 npm install
 npm run dev
 
-# Frontend (nouveau terminal)
+# 3. Ouvrir un NOUVEAU terminal, installer et lancer le Frontend
 cd frontend
 npm install
 npm run dev
+
+# 4. Ouvrir dans le navigateur
+# Frontend: http://localhost:5173
+# API: http://localhost:3001
 ```
 
-L'application sera accessible sur:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:3001
+### 🔐 Comptes de Test
 
-### 🔐 Comptes de test
-| Rôle | Username | Mot de passe |
-|------|----------|--------------|
-| 👑 Admin | `admin` | `admin123` |
-| 🎯 Leader | `max_leader` | `leader123` |
-| 👤 Participant | `ahmed` | `pass123` |
+| Rôle | Username | Mot de passe | Permissions |
+|------|----------|--------------|-------------|
+| 👑 **Admin** | `admin` | `admin123` | Tout gérer, attribuer des scores |
+| 🎯 **Leader** | `max_leader` | `leader123` | Gérer son équipe, ajouter des membres |
+| 👤 **Participant** | `ahmed` | `pass123` | Voir le classement, soumettre |
 
-## 🌐 Déploiement (Hébergement Gratuit)
+---
 
-### Option 1: Render (Recommandé)
+## 🛠️ Technologies Utilisées
 
-#### Étape 1: Déployer le Backend sur Render
-1. Aller sur **https://render.com** et se connecter avec GitHub
-2. Cliquer **"New" → "Web Service"**
-3. Sélectionner le repo `Podium-de-concours`
-4. Configurer:
-   - **Name:** `podium-api`
-   - **Root Directory:** `backend`
-   - **Build Command:** `npm install && npm run build`
-   - **Start Command:** `npm start`
-5. Copier l'URL générée (ex: `https://podium-api.onrender.com`)
+### Frontend
+| Technologie | Usage |
+|-------------|-------|
+| React 18 | Framework UI |
+| TypeScript | Typage statique |
+| Vite | Build tool |
+| Framer Motion | Animations |
+| React Router | Navigation |
+| Socket.io-client | Temps réel |
+| Lucide React | Icônes |
+| React Hot Toast | Notifications |
+| React Confetti | Effets festifs |
 
-#### Étape 2: Déployer le Frontend sur Render
-1. **"New" → "Static Site"**
-2. Sélectionner le même repo
-3. Configurer:
-   - **Name:** `podium-concours`
-   - **Root Directory:** `frontend`
-   - **Build Command:** `npm install && npm run build`
-   - **Publish Directory:** `dist`
-   - **Environment Variable:** `VITE_API_URL` = `https://podium-api.onrender.com/api`
+### Backend
+| Technologie | Usage |
+|-------------|-------|
+| Node.js | Runtime |
+| Express | Framework API |
+| TypeScript | Typage statique |
+| Socket.io | WebSocket temps réel |
+| MySQL2 | Driver base de données |
 
-### Option 2: Vercel (Frontend) + Render (Backend)
-
-```bash
-# Frontend sur Vercel
-cd frontend
-npx vercel --prod
-```
-
-## 💾 Système de Stockage Adaptatif
-
-L'application détecte automatiquement le meilleur stockage disponible:
-
-| Priorité | Mode | Description |
-|----------|------|-------------|
-| 1️⃣ | MySQL | Si `DB_HOST` est configuré |
-| 2️⃣ | JSON | Fichiers dans `backend/data/` |
-| 3️⃣ | Mémoire | Données temporaires |
-
-Terminal 2 - Frontend:
-```bash
-cd frontend
-npm start
-```
-
-L'application sera accessible sur:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
+---
 
 ## 📁 Structure du Projet
 
 ```
-Podium de concours/
+Podium-de-concours/
 ├── backend/
-│   ├── config/
-│   │   └── database.js       # Configuration MySQL
-│   ├── routes/
-│   │   ├── teams.js          # API équipes
-│   │   ├── scores.js         # API scores
-│   │   ├── challenges.js     # API défis
-│   │   └── activity.js       # API activités
-│   ├── database/
-│   │   └── setup.sql         # Script SQL
-│   ├── server.js             # Point d'entrée
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── dataStore.ts    # Système stockage adaptatif
+│   │   │   └── mockData.ts     # Données initiales
+│   │   ├── server-adaptive.ts  # Serveur principal
+│   │   └── types/
 │   ├── package.json
-│   └── .env
+│   └── tsconfig.json
 │
-└── frontend/
-    ├── public/
-    │   └── index.html
-    ├── src/
-    │   ├── components/
-    │   │   ├── Layout/       # Header, Layout
-    │   │   ├── Podium/       # Composant podium
-    │   │   ├── Leaderboard/  # Tableau classement
-    │   │   ├── Stats/        # Cartes statistiques
-    │   │   └── TeamForm/     # Formulaire équipe
-    │   ├── pages/
-    │   │   ├── Dashboard.tsx
-    │   │   ├── LeaderboardPage.tsx
-    │   │   ├── TeamsPage.tsx
-    │   │   └── AdminPage.tsx
-    │   ├── hooks/
-    │   │   ├── useLeaderboard.ts
-    │   │   └── useStats.ts
-    │   ├── services/
-    │   │   └── api.ts        # Client API
-    │   ├── types/
-    │   │   └── index.ts      # Types TypeScript
-    │   ├── App.tsx
-    │   ├── index.tsx
-    │   └── index.css         # Styles globaux
-    ├── package.json
-    └── tsconfig.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Layout/         # Header, Footer, Navigation
+│   │   │   ├── Podium/         # Podium animé
+│   │   │   ├── Leaderboard/    # Tableau classement
+│   │   │   ├── Countdown/      # Compte à rebours
+│   │   │   ├── ActivityFeed/   # Fil d'activité
+│   │   │   └── Stats/          # Cartes statistiques
+│   │   ├── pages/
+│   │   │   ├── Dashboard.tsx   # Page principale
+│   │   │   ├── TeamsPage.tsx   # Gestion équipes
+│   │   │   ├── AdminPage.tsx   # Administration
+│   │   │   └── LoginPage.tsx   # Authentification
+│   │   ├── contexts/
+│   │   │   └── AuthContext.tsx # Gestion auth
+│   │   ├── hooks/
+│   │   │   ├── useLeaderboard.ts
+│   │   │   └── useStats.ts
+│   │   ├── services/
+│   │   │   └── api.ts          # Client API
+│   │   └── types/
+│   ├── package.json
+│   └── vite.config.ts
+│
+└── README.md
 ```
+
+---
 
 ## 🔌 API Endpoints
 
-### Teams
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/teams` | Liste toutes les équipes |
-| GET | `/api/teams/:id` | Détails d'une équipe |
-| POST | `/api/teams` | Créer une équipe |
-| PUT | `/api/teams/:id` | Modifier une équipe |
-| DELETE | `/api/teams/:id` | Supprimer une équipe |
+### Authentification
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/auth/login` | Connexion |
+| POST | `/api/auth/register` | Inscription |
+| GET | `/api/auth/me` | Utilisateur courant |
+
+### Équipes
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/teams` | Liste des équipes |
+| POST | `/api/teams` | Créer une équipe (auth) |
+| PUT | `/api/teams/:id` | Modifier (leader/admin) |
+| DELETE | `/api/teams/:id` | Supprimer (admin) |
+| GET | `/api/teams/:id/members` | Membres d'une équipe |
+| POST | `/api/teams/:id/members` | Ajouter membre (leader) |
 
 ### Scores
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/scores/leaderboard` | Classement complet |
-| GET | `/api/scores` | Liste tous les scores |
-| POST | `/api/scores` | Ajouter des points |
-| PUT | `/api/scores/:id` | Modifier un score |
-| DELETE | `/api/scores/:id` | Supprimer un score |
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/scores/leaderboard` | Classement |
+| POST | `/api/scores` | Attribuer points (admin) |
 
-### Challenges
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/challenges` | Liste tous les défis |
-| GET | `/api/challenges/:id` | Détails d'un défi |
-| POST | `/api/challenges` | Créer un défi |
-
-### Activity
-| Method | Endpoint | Description |
-|--------|----------|-------------|
+### Activité
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
 | GET | `/api/activity` | Activités récentes |
-| GET | `/api/activity/stats` | Statistiques globales |
+| GET | `/api/activity/stats` | Statistiques |
 
-## 🎨 Captures d'écran
+---
 
-### Dashboard Principal
-- Statistiques en temps réel
-- Podium animé avec les 3 premiers
-- Classement complet
+## 🏅 Réponse au Défi
 
-### Page Équipes
-- Grille de cartes équipes
-- Recherche et filtres
-- Création/édition modale
+Ce projet répond à **100%** aux critères du défi "Podium de concours":
 
-### Page Admin
-- Attribution de points
-- Actions rapides
-- Liste des défis
+| Critère | Status |
+|---------|--------|
+| Gamification du défi principal | ✅ |
+| Interface gestion des équipes | ✅ |
+| Visualisation de progression | ✅ |
+| Classement en temps réel | ✅ |
+| Mise à jour automatique depuis BDD | ✅ |
+| Bonnes pratiques accessibilité (WCAG) | ✅ |
+| Code source complet (Frontend + Backend) | ✅ |
+| README avec instructions | ✅ |
+| Dépôt GitHub | ✅ |
 
-## ♿ Accessibilité
-
-Cette application respecte les normes WCAG 2.1 niveau AA:
-
-- ✅ Navigation au clavier (Tab, Enter, Escape)
-- ✅ Skip links vers le contenu principal
-- ✅ Labels ARIA pour lecteurs d'écran
-- ✅ Ratio de contraste minimum 4.5:1
-- ✅ Focus visible sur tous les éléments
-- ✅ Support `prefers-reduced-motion`
-- ✅ Textes alternatifs pour icônes
-- ✅ Structure sémantique HTML5
-
-## 🏅 Défi Nuit de l'Info 2025
-
-Ce projet répond au défi **"Podium de concours"**:
-- ✅ Gamification du défi principal
-- ✅ Interface de gestion des équipes
-- ✅ Visualisation de progression
-- ✅ Classement en temps réel
-- ✅ Mise à jour automatique depuis la BDD
-- ✅ Bonnes pratiques d'accessibilité (WCAG)
+---
 
 ## 👥 Équipe
 
@@ -271,9 +221,11 @@ Ce projet répond au défi **"Podium de concours"**:
 
 ### 💪 Projet réalisé par l'Équipe MAX 100% 💪
 
-Nuit de l'Info 2025
+**Nuit de l'Info 2025**
 
 </div>
+
+---
 
 ## 📄 Licence
 
@@ -281,4 +233,8 @@ MIT License - Nuit de l'Info 2025
 
 ---
 
+<div align="center">
+
 🏆 **Développé avec ❤️ par l'Équipe MAX 100%** pour la Nuit de l'Info 2025 🌊
+
+</div>
