@@ -4,7 +4,7 @@
 
 <div align="center">
 
-### 🚀 Réalisé à 100% par l'Équipe MAX 🚀
+### 🚀 Réalisé par l'Équipe MAX 100% 🚀
 
 </div>
 
@@ -269,7 +269,7 @@ Ce projet répond au défi **"Podium de concours"**:
 
 <div align="center">
 
-### 💪 Projet réalisé à 100% par l'Équipe MAX 100% 💪
+### 💪 Projet réalisé par l'Équipe MAX 100% 💪
 
 Nuit de l'Info 2025
 
@@ -281,4 +281,4 @@ MIT License - Nuit de l'Info 2025
 
 ---
 
-🏆 **Développé avec ❤️ par l'Équipe MAX** pour la Nuit de l'Info 2025 🌊
+🏆 **Développé avec ❤️ par l'Équipe MAX 100%** pour la Nuit de l'Info 2025 🌊
