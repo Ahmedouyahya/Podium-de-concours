@@ -52,71 +52,88 @@
 - **React Confetti** - Effets festifs
 
 ### Backend
-- **Node.js** avec Express
-- **MySQL** - Base de données
-- **Socket.io** - WebSocket
-- **mysql2** - Driver MySQL
+- **Node.js** avec Express & TypeScript
+- **Stockage Adaptatif** - MySQL → JSON → Mémoire
+- **Socket.io** - WebSocket temps réel
 
-## 🚀 Installation
+## 🚀 Installation Locale
 
 ### Prérequis
 - Node.js 18+
-- MySQL 8.0+
 - npm ou yarn
+- MySQL 8.0+ (optionnel - l'app fonctionne sans!)
 
-### 1. Cloner le projet
-```bash
-cd "Podium de concours"
-```
-
-### 2. Configuration de la base de données
+### Installation rapide (sans MySQL)
 
 ```bash
-# Créer la base de données
-mysql -u root -p < backend/database/setup.sql
-```
+# Cloner le projet
+git clone https://github.com/Ahmedouyahya/Podium-de-concours.git
+cd Podium-de-concours
 
-Ou créez manuellement une base `podium_concours` et les tables seront créées automatiquement.
-
-### 3. Configuration du Backend
-
-```bash
+# Backend
 cd backend
-
-# Installer les dépendances
 npm install
+npm run dev
 
-# Configurer les variables d'environnement
-# Éditer le fichier .env avec vos paramètres MySQL
-```
-
-Fichier `.env`:
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=podium_concours
-DB_PORT=3306
-PORT=5000
-FRONTEND_URL=http://localhost:3000
-```
-
-### 4. Configuration du Frontend
-
-```bash
+# Frontend (nouveau terminal)
 cd frontend
-
-# Installer les dépendances
 npm install
-```
-
-### 5. Lancer l'application
-
-Terminal 1 - Backend:
-```bash
-cd backend
 npm run dev
 ```
+
+L'application sera accessible sur:
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:3001
+
+### 🔐 Comptes de test
+| Rôle | Username | Mot de passe |
+|------|----------|--------------|
+| 👑 Admin | `admin` | `admin123` |
+| 🎯 Leader | `max_leader` | `leader123` |
+| 👤 Participant | `ahmed` | `pass123` |
+
+## 🌐 Déploiement (Hébergement Gratuit)
+
+### Option 1: Render (Recommandé)
+
+#### Étape 1: Déployer le Backend sur Render
+1. Aller sur **https://render.com** et se connecter avec GitHub
+2. Cliquer **"New" → "Web Service"**
+3. Sélectionner le repo `Podium-de-concours`
+4. Configurer:
+   - **Name:** `podium-api`
+   - **Root Directory:** `backend`
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm start`
+5. Copier l'URL générée (ex: `https://podium-api.onrender.com`)
+
+#### Étape 2: Déployer le Frontend sur Render
+1. **"New" → "Static Site"**
+2. Sélectionner le même repo
+3. Configurer:
+   - **Name:** `podium-concours`
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm install && npm run build`
+   - **Publish Directory:** `dist`
+   - **Environment Variable:** `VITE_API_URL` = `https://podium-api.onrender.com/api`
+
+### Option 2: Vercel (Frontend) + Render (Backend)
+
+```bash
+# Frontend sur Vercel
+cd frontend
+npx vercel --prod
+```
+
+## 💾 Système de Stockage Adaptatif
+
+L'application détecte automatiquement le meilleur stockage disponible:
+
+| Priorité | Mode | Description |
+|----------|------|-------------|
+| 1️⃣ | MySQL | Si `DB_HOST` est configuré |
+| 2️⃣ | JSON | Fichiers dans `backend/data/` |
+| 3️⃣ | Mémoire | Données temporaires |
 
 Terminal 2 - Frontend:
 ```bash
